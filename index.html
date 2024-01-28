@@ -1,32 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/assets/css/style.css">
-    <link rel="stylesheet" href="./src/assets/css/variables.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/assets/css/style.css" />
+    <link rel="stylesheet" href="./src/assets/css/variables.css" />
     <title>Challenge One - Decodificador de Texto</title>
 </head>
-<body>
-    <header>
-        <div id="logo"></div>
-    </header>
 
-    <main>
-        <div>
-        <input id="texto" type="text" placeholder="Digite seu texto...">
-        </div>
-        <div id="rectangle-1">
-            <img src="./src/assets/img/High quality products 1 1.svg" alt="">
-            <div id="frame5">
-                <h4>Nenhuma mensagem encontrada</h4>
-                <p>Digite um texto que você deseja criptografar ou descriptografar</p>
+<body>
+    <div class="container">
+        <header>
+            <div id="logo">
+                <img src="./src/assets/img/logo.png" alt="Logo" />
             </div>
-        </div>
-    </main>
+        </header>
+
+        <main>
+            <div id="texto">
+                <textarea id="textarea" cols="50" rows="10" placeholder="Digite seu texto..."></textarea>
+            
+                <div id="frame1">
+                    <img src="./src/assets/img/bi_exclamation-circle-fill.png" alt="" />
+                    <p>Apenas letras minúsculas e sem acento.</p>
+                </div>
+                <div id="frame3">
+                    <button id="button1">Criptografar</button>
+                    <button id="button2">Descriptografar</button>
+                </div>
+            </div>
+            
+            <div id="rectangle-1">
+                <img src="./src/assets/img/High quality products 1 1.svg" alt="" />
+                <div id="frame5">
+                    <h4>Nenhuma mensagem encontrada</h4>
+                    <p>
+                        Digite um texto que você deseja criptografar ou descriptografar
+                    </p>
+                </div>
+            </div>
+            
+        </main>
+    </div>
 
     <footer>
-
     </footer>
 </body>
+
 </html>
