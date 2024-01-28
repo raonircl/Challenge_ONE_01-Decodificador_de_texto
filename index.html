@@ -26,18 +26,21 @@
                     <p>Apenas letras minúsculas e sem acento.</p>
                 </div>
                 <div id="frame3">
-                    <button id="button1">Criptografar</button>
+                    <button id="button1" onclick="criptografarClick()">Criptografar</button>
                     <button id="button2">Descriptografar</button>
                 </div>
             </div>
             
             <div id="rectangle-1">
-                <img src="./src/assets/img/High quality products 1 1.svg" alt="" />
                 <div id="frame5">
+                    <img src="./src/assets/img/High quality products 1 1.svg" alt="" />
                     <h4>Nenhuma mensagem encontrada</h4>
                     <p>
                         Digite um texto que você deseja criptografar ou descriptografar
                     </p>
+                </div>
+                <div>
+                    <textarea id="exibirtexto" cols="30" rows="20" hidden></textarea>
                 </div>
             </div>
             
@@ -46,6 +49,8 @@
 
     <footer>
     </footer>
+
+    <script src="./src/script/index.js" defer></script>
 </body>
 
 </html>

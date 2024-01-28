@@ -163,3 +163,21 @@ header {
     color: var(--gray-500);
     margin: 10%;
 }
+
+.hidden #frame5 {
+    display: none;
+}
+
+#exibirtexto {
+    background-color: transparent;
+    resize: none;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--dark-blue-300);
+    border: none;
+}
