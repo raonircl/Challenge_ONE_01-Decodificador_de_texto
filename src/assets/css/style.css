@@ -211,3 +211,7 @@ footer {
     border: 1px;
     gap: 8px;
 }
+
+#mensagem {
+    padding: 10px;
+}

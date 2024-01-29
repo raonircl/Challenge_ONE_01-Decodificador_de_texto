@@ -6,7 +6,6 @@ const criptografarClick = () => {
     
     click.addEventListener('click', function () {
         const textoCriptografado = texto.value.toLowerCase();
-        console.log(textoCriptografado);
         rectangle.classList.add('hidden');
         exibirTexto.removeAttribute('hidden');
         exibirTexto.textContent = criptografia(textoCriptografado);
@@ -26,6 +25,43 @@ const descriptografarClick = () => {
         exibirTexto.removeAttribute('hidden');
         exibirTexto.textContent = descriptografia(textoDescriptografado);
     });
+};
+
+const copiar = () => {
+    const botaoCopiar = document.getElementById('copiar');
+
+    botaoCopiar.addEventListener('click', function () {
+        const textoCopiar = document.getElementById('exibirtexto').textContent;
+        console.log(textoCopiar);
+        areaDeTransferencia(textoCopiar);
+    });
+};
+
+const areaDeTransferencia = (texto) => {
+    if (!texto.trim()) {
+        exibirMensagem('O texto está vazio.', true);
+        return;
+    }
+    
+    navigator.clipboard.writeText(texto)
+        .then(() => {
+            exibirMensagem('Texto copiado com sucesso!');
+        })
+        .catch((error) => {
+            exibirMensagem('Erro ao copiar para a área de transferência.', true);
+        });
+};
+
+const exibirMensagem = (mensagem, erro = false) => {
+    const mensagemElement = document.getElementById('mensagem');
+    mensagemElement.removeAttribute('hidden');
+    mensagemElement.textContent = mensagem;
+    mensagemElement.style.color = erro ? 'red' : 'green';
+
+    setTimeout(() => {
+        mensagemElement.textContent = ''
+        mensagemElement.setAttribute('hidden', true);
+    }, 3000)
 };
 
 const criptografia = (texto) => {
@@ -51,3 +87,7 @@ const descriptografia = (texto) => {
 
     return texto.replace(/(enter|imes|ai|ober|ufat)/g, palavra => mapaDeCriptografia[palavra]);
 };
+
+criptografarClick();
+descriptografarClick();
+copiar();
