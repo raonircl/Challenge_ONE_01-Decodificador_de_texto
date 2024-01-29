@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -44,7 +45,6 @@ header {
 }
 
 #texto textarea {
-    font-family: 'Inter', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -74,7 +74,6 @@ header {
 }
 
 #frame1 p {
-    font-family: 'Inter', sans-serif;
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
@@ -98,7 +97,6 @@ header {
     height: 47px;
     padding: 14px;
     border-radius: 25px;
-    font-family: 'Inter', sans-serif;
     font-size: 12px;
     font-weight: 400;
     line-height: 19px;
@@ -146,7 +144,6 @@ header {
 }
 
 #frame5 h4 {
-    font-family: 'Inter', sans-serif;
     font-size: 22px;
     line-height: 29px;
     letter-spacing: 0em;
@@ -155,7 +152,6 @@ header {
 }
 
 #frame5 p {
-    font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -172,7 +168,6 @@ header {
     background-color: transparent;
     resize: none;
     width: 100%;
-    font-family: 'Inter', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -180,4 +175,29 @@ header {
     text-align: left;
     color: var(--dark-blue-300);
     border: none;
+}
+
+footer {
+    top: 80px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#instagram, #linkedin, #github {
+    width: 120px;
+    height: 34px;
+    padding: 24px, 0px, 24px, 0px;
+    border-radius: 16px;
+    background-color: var(--dark-blue-300);
+    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    color: black;
 }
