@@ -9,39 +9,61 @@
 }
 
 body {
-    background-color: var(--light-blue-100);
+    background-color: var(--light-blue-300);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
+    margin: 0;
 }
 
 header {
     position: relative;
-    width: 120px;
-    height: 48px;
-    top: 40px;
-    left: 40px;
-    gap: 40px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+@keyframes caindoEDesaparecendo {
+    75% {
+        transform: rotate(-5deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
 }
 
 #logo {
-    background-image: url('../img/Logo.png');
+    position: relative;
     height: 48px;
+    animation: caindoEDesaparecendo 4s;
+    top: 40%;
 }
 
 .container {
     width: 100%;
-    height: 100%;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: 20px auto;
     box-sizing: border-box;
     display: flex;
+    flex-wrap: wrap;
 }
 
 #texto {
-    position: relative;
     width: 100%;
-    height: 48px;
-    top: 100px;
-    left: 100px;
+    max-width: 800px;
+    margin: 100px;
+    box-sizing: border-box;
+    background-color: var(--grey-400);
+    padding: 20px;
+    border-radius: 25px;
 }
 
 #texto textarea {
@@ -57,15 +79,29 @@ header {
     background-color: transparent;
     resize: none;
     width: 100%;
+    margin-bottom: 100px;
+    border: 1px solid var(--dark-blue-300);
+}
+
+#frame1,
+#frame3,
+#frame5 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+#rectangle-1 {
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    margin: 20px auto;
 }
 
 #frame1 {
-    position: relative;
-    width: 252px;
-    height: 18px;
-    top: 170px;
-    gap: 8px;
     display: flex;
+    align-items: center;
 }
 
 #frame1 img {
@@ -85,14 +121,13 @@ header {
 
 #frame3 {
     display: flex;
-    position: relative;
-    top: 180px;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 16px;
 }
 
 #frame3 button {
-    width: 100%; 
+    width: 100%;
     max-width: 200px;
     height: 47px;
     padding: 14px;
@@ -103,7 +138,6 @@ header {
     letter-spacing: 0em;
     text-align: center;
 }
-
 
 #frame3 #button1 {
     background-color: var(--dark-blue-300);
@@ -116,17 +150,14 @@ header {
 
 #rectangle-1 {
     box-sizing: border-box;
-    position: relative;
-    width: 80%;
-    max-width: 400px;
-    height: 580px;
-    left: 800px;
+    height: 83%;
     border-radius: 32px;
     background-color: #d8dfe8;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 10px;
 }
 
 #rectangle-1 img {
@@ -136,8 +167,6 @@ header {
 }
 
 #frame5 {
-    width: 100%;
-    max-width: 400px;
     box-sizing: border-box;
     padding: 20px;
     text-align: center;
@@ -173,12 +202,14 @@ header {
     line-height: 1.5;
     letter-spacing: 0em;
     text-align: left;
+    padding: 10px;
     color: var(--dark-blue-300);
     border: none;
+    border-radius: 25px;
+    margin-bottom: 45px;
 }
 
 footer {
-    top: 80px;
     position: relative;
     width: 100%;
     display: flex;
@@ -188,10 +219,12 @@ footer {
     padding: 10px;
 }
 
-#instagram, #linkedin, #github {
+#instagram,
+#linkedin,
+#github {
     width: 120px;
     height: 34px;
-    padding: 24px, 0px, 24px, 0px;
+    padding: 24px;
     border-radius: 16px;
     background-color: var(--dark-blue-300);
     margin-right: 20px;
@@ -203,15 +236,34 @@ footer {
 }
 
 #copiar {
-    position: sticky;
-    width: 336px;
-    height: 67px;
-    padding: 24px;
-    border-radius: 24px;
-    border: 1px;
+    width: 100%;
+    max-width: 200px;
+    padding: 14px;
+    border-radius: 25px;
+    font-size: 12px;
+    border: 1px solid;
+    height: 47px;
     gap: 8px;
+    background-color: var(--dark-blue-300);
 }
 
 #mensagem {
     padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    #texto {
+        padding: 10px;
+    }
+
+    #frame1,
+    #frame3,
+    #rectangle-1,
+    #frame5 {
+        margin: 10px;
+    }
 }
