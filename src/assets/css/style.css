@@ -251,7 +251,7 @@ footer {
     padding: 10px;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     header {
         padding: 10px;
     }
@@ -309,4 +309,4 @@ footer {
         width: 100px;
         margin: 10px;
     }
-}
+} */
