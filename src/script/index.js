@@ -5,7 +5,17 @@ const criptografarClick = () => {
     const click = document.getElementById('button1');
     
     click.addEventListener('click', function () {
-        const textoCriptografado = texto.value.toLowerCase();
+        const formatoAceito = verificarTexto(texto.value);
+
+        if (formatoAceito) {
+            console.log(formatoAceito);
+            rectangle.classList.add('hidden');
+            exibirTexto.removeAttribute('hidden');
+            exibirTexto.textContent = formatoAceito;
+            return;
+        }
+
+        const textoCriptografado = texto.value;
         rectangle.classList.add('hidden');
         exibirTexto.removeAttribute('hidden');
         exibirTexto.textContent = criptografia(textoCriptografado);
@@ -86,6 +96,14 @@ const descriptografia = (texto) => {
     };
 
     return texto.replace(/(enter|imes|ai|ober|ufat)/g, palavra => mapaDeCriptografia[palavra]);
+};
+
+const verificarTexto = (texto) => {
+    const letraMaiuscula = /[A-Z]/.test(texto);
+    const letraAcento = /[À-Úà-ú]/.test(texto);
+    if (letraMaiuscula || letraAcento) {
+        return "Contém letras maiúsculas ou acentos."
+    }
 };
 
 criptografarClick();
